@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Adblock Camouflage",
+  "description": "This extension prevents the detection of Adblocker",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+	"matches" : ["<all_urls>"],
+	"js": ["scriptTagCreator.js"],
+	"run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources" : ["myscript.js"]
+}
+
